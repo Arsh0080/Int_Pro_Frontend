@@ -1,38 +1,215 @@
-.App {
+/* Import a modern font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1f2937; /* high contrast text */
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+h1,
+h3 {
+  color: #111827;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+/* Inputs + Textareas */
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin: 8px 0;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.25s ease;
+  background: #fdfdfd;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Layouts */
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.section,
+.skill-section {
+  border: 1px solid #e5e7eb;
+  padding: 18px;
+  border-radius: 14px;
+  margin: 14px 0;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.section:hover,
+.skill-section:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+/* -------- BUTTONS -------- */
+.btn {
+  padding: 12px 20px;
+  min-width: 120px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Edit Button */
+.btn.edit {
+  background: #4b5563;
+  color: #fff;
+}
+.btn.edit:hover {
+  background: #374151;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Save Button */
+.btn.save {
+  background: #6366f1;
+  color: #fff;
+}
+.btn.save:hover {
+  background: #4f46e5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Add Button */
+.btn.add {
+  background: #2563eb;
+  color: #fff;
+}
+.btn.add:hover {
+  background: #1d4ed8;
+}
+
+/* Delete Button */
+.btn.delete {
+  background: #3b82f6;
+  color: #fff;
+}
+.btn.delete:hover {
+  background: #1e40af;
+}
+
+/* Hover + Shadow Effects */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+}
+
+/* Input row spacing */
+.input-row {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Tags (Skills) */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tag {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.25);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
+
+.tag:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  box-shadow: 0 6px 16px rgba(67, 56, 202, 0.4);
+}
+
+/* View Section Text */
+.view-section p {
+  margin: 10px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Smooth transitions everywhere */
+* {
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Profile Header Layout */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
