@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# 🚀 Intern Project – Full Stack Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 👤 Author
+**Arsh Gupta**
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔗 Working URLs
+- **Frontend Repository:** [https://github.com/Arsh0080/Int_Pro_Frontend](https://github.com/Arsh0080/Int_Pro_Frontend)  
+- **Backend Repository:** [https://github.com/Arsh0080/Int_Pro_Backend](https://github.com/Arsh0080/Int_Pro_Backend)  
 
-### `npm start`
+- **Frontend Deployment (Vercel):** [https://int-pro-frontend.vercel.app/](https://int-pro-frontend.vercel.app/)  
+- **Backend Deployment (Render):** [https://int-pro-backend.onrender.com/](https://int-pro-backend.onrender.com/)  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Resume Link:** [Click here](https://drive.google.com/file/d/1xYsWq2l5SGOE1Fqc02nqq8QxRRRrr6Eb/view?usp=drive_link)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🏗️ Project Architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project is divided into two parts:
 
-### `npm run build`
+1. **Backend (Node.js + Express + MongoDB)**
+   - Handles API requests
+   - Stores data in MongoDB
+   - Hosted on **Render**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Frontend (React)**
+   - Minimal UI to:
+     - Search by skill
+     - List projects
+     - View profile
+   - Calls hosted backend API (CORS enabled)
+   - Hosted on **Vercel**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Setup Instructions
 
-### `npm run eject`
+### 🔹 Backend (Local Setup)
+```bash
+# Clone repo
+git clone https://github.com/Arsh0080/Int_Pro_Backend.git
+cd Int_Pro_Backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Create .env file
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Run locally
+npm run dev
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Frontend
+public/        # Static assets
+src/
+ ├── App.js    # Main component
+ ├── index.js  # React entry point
+ ├── App.css   # Styling
+ ├── ...
+.env           # Environment variables
 
-## Learn More
+Backend
+index.js       # Entry point for server
+models.js      # Database models
+.env           # Environment variables
+package.json   # Dependencies and scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Clone repo
+git clone https://github.com/Arsh0080/Int_Pro_Frontend.git
+cd Int_Pro_Frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Install dependencies
+npm install
 
-### Code Splitting
+# Create .env file
+REACT_APP_BACKEND_URL=http://localhost:5000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Run locally
+npm start
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
